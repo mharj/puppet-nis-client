@@ -1,0 +1,6 @@
+# /etc/yp.conf - ypbind configuration file - controlled by puppet
+<% yp_servers.keys.sort.each do |domain| -%>
+<% yp_servers[domain].each do |server| -%>
+domain <%= domain %> server <%= server %>
+<% end -%>
+<% end -%>
