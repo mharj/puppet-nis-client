@@ -58,7 +58,6 @@ class nis::client ($domainname,$yp_servers) {
                         path    => [ '/bin','/usr/bin','/sbin','/usr/sbin'],
                         unless  => "grep ^NISDOMAIN=${domainname} /etc/sysconfig/network",
                         onlyif  => 'grep ^NISDOMAIN /etc/sysconfig/network',
-                        notify  => Service["ypbind"], 
                 } # replace NISDOMAIN if different than current
         }
         # nisdomain file for Debian based
@@ -69,7 +68,6 @@ class nis::client ($domainname,$yp_servers) {
                         group   => 'root',
                         mode    => '0644',
                         content => "${domainname}\n",
-                        notify  => Service["ypbind"]
                 }
         }
 }
