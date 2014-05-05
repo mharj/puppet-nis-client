@@ -7,13 +7,13 @@
 # Document parameters here.
 #
 # domainname => 'domainname'
-# yp_servers => { 'nis_domain1' => ['server1','server2','server3'],'nis_domain2'=>['server1','server2','server3'], ..... } 
+# yp_servers => { 'nis_domain1' => ['server1','server2','server3'},'nis_domain2'=>['server1','server2','server3'], ..... } 
 #
 # === Examples
 #
 #  class { 'nis::client':
 #    domainname => 'domainname',
-#    yp_servers => { 'nis_domain1' => ['server1','server2','server3'],'nis_domain2'=>['server1','server2','server3'], ..... }
+#    yp_servers => { 'nis_domain1' => ['server1','server2','server3'},'nis_domain2'=>['server1','server2','server3'], ..... }
 #  }
 #
 
@@ -35,6 +35,7 @@ class nis::client ($domainname,$yp_servers) {
         service {'ypbind':
                 name => $package ,
                 ensure  => running,
+                hasrestart => "true",
                 enable  => "true",
                 require => Package['ypbind'],
         }
