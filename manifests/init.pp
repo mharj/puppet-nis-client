@@ -7,13 +7,13 @@
 # Document parameters here.
 #
 # domainname => 'domainname'
-# yp_servers => { 'nis_domain1' => ['server1','server2','server3'},'nis_domain2'=>['server1','server2','server3'], ..... } 
+# yp_servers => { 'nis_domain1' => ['server1','server2','server3'],'nis_domain2'=>['server1','server2','server3'], ..... } 
 #
 # === Examples
 #
 #  class { 'nis::client':
 #    domainname => 'domainname',
-#    yp_servers => { 'nis_domain1' => ['server1','server2','server3'},'nis_domain2'=>['server1','server2','server3'], ..... }
+#    yp_servers => { 'nis_domain1' => ['server1','server2','server3'],'nis_domain2'=>['server1','server2','server3'], ..... }
 #  }
 #
 
