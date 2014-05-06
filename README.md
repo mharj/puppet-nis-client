@@ -4,9 +4,9 @@ puppet-nis-client
 Manifest and template for yp.conf on Linux
 
 Install to modules directory:
-
-git clone https://github.com/mharj/puppet-nis-client.git nis
-
+```bash
+# git clone https://github.com/mharj/puppet-nis-client.git nis
+```
 
 Example:
 ```ruby
