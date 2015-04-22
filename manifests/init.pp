@@ -17,7 +17,10 @@
 #  }
 #
 
-class nis::client ($domainname,$yp_servers) {
+class nis::client {
+		include "nis::config"
+		$domainname = $nis::config::domainname
+		$yp_servers = $nis::config::yp_servers
         # yp.conf
         case $operatingsystem {
                 centos,redhat: { $package = "ypbind" }
